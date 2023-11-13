@@ -9,15 +9,6 @@ import os
 
 def generate_launch_description():
 
-    server_arg = DeclareLaunchArgument(
-        'server',
-        default_value='192.168.0.101'
-    )
-    port_arg = DeclareLaunchArgument(
-        'port',
-        default_value='3883'
-    )
-
     vrpn_mocap_node = IncludeLaunchDescription(
         YAMLLaunchDescriptionSource(
             os.path.join(
@@ -26,8 +17,8 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'server' : server_arg,
-            'port' : port_arg,
+            'server' : '192.168.0.101',
+            'port' : '3883',
         }.items()
     )
     
