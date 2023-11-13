@@ -11,12 +11,13 @@ MocapInterfaceComponent::MocapInterfaceComponent()
 : Node("mocap_interface")
 {
     // Parameters
-    this->declare_parameter("rb_name", "/uav/pose");
+    this->declare_parameter("rb_name", "uav");
     const std::string rigid_body_name = this->get_parameter("rb_name").as_string();
+    const std::string vrpn_topic = "/vrpn_mocap/"+rigid_body_name+"/pose";
     
     // Subscribers & Publishers
     mocap_sub_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
-        rigid_body_name, 10, std::bind(&MocapInterfaceComponent::mocap_callback, this, std::placeholders::_1));
+        vrpn_topic, 10, std::bind(&MocapInterfaceComponent::mocap_callback, this, std::placeholders::_1));
     odom_pub_ = this->create_publisher<px4_msgs::msg::VehicleOdometry>(
         "/fmu/in/vehicle_visual_odometry", 10);
         // alternative is /fmu/in/vehicle_mocap_odometry...needs testing

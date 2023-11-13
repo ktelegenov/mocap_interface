@@ -11,6 +11,7 @@ find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(px4_msgs REQUIRED)
+find_package(vrpn_mocap required)
 
 add_library(
   ${PROJECT_NAME}_component SHARED src/${PROJECT_NAME}_component.cpp
