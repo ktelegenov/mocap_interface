@@ -11,7 +11,7 @@ MocapInterfaceComponent::MocapInterfaceComponent()
 : Node("mocap_interface")
 {
     // Parameters
-    this->declare_parameter("rb_name", "uav");
+    this->declare_parameter("rb_name", "RigidBody01");
     const std::string rigid_body_name = this->get_parameter("rb_name").as_string();
     const std::string vrpn_topic = "/vrpn_mocap/"+rigid_body_name+"/pose";
     
