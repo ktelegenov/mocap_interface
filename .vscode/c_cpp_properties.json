@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/parallels/test_ws/install/teensy_interface/include/**",
+        "/home/parallels/test_ws/install/mocap_interface/include/**",
+        "/home/parallels/test_ws/install/drone_control/include/**",
+        "/home/parallels/test_ws/install/px4_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/parallels/test_ws/src/drone_control/include/**",
+        "/home/parallels/test_ws/src/mocap_interface/include/**",
+        "/home/parallels/test_ws/src/mocap_optitrack/include/**",
+        "include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

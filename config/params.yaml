@@ -1,0 +1,3 @@
+/mocap_interface:
+  ros__parameters:
+    rb_name : "/uav/pose"
